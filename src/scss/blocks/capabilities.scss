@@ -1,0 +1,73 @@
+.capabilities {
+	padding-top: 116px;
+	padding-bottom: 128px;
+	&__title {
+		font-family: "Neue Machina", sans-serif;
+	}
+	&__row {
+		display: flex;
+		gap: 32px;
+		margin-top: 52px;
+	}
+	&__coll {
+		flex: 1;
+	}
+	&__box {
+		margin-top: 14px;
+		padding-right: 15px;
+	}
+	&__caption {
+		font-family: "Neue Machina", sans-serif;
+		color: $white;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 6px;
+	}
+	&__desc {
+		font-weight: 500;
+	}
+}
+@media (max-width: 1199px) {
+	.capabilities {
+		&__row {
+			gap: 24px;
+		}
+		&__box {
+			padding-right: 0px;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.capabilities {
+		padding-top: 114px;
+		padding-bottom: 208px;
+		&__title {
+			font-size: 40px;
+		}
+		&__row {
+			flex-wrap: wrap;
+			gap: 68px 24px;
+		}
+		&__coll {
+			flex: auto;
+			width: calc(50% - 30px);
+		}
+		&__box {
+			max-width: 285px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.capabilities {
+		padding-bottom: 100px;
+		&__row {
+			gap: 32px;
+			width: 66%;
+			margin-left: auto;
+		}
+		&__coll {
+			width: 100%;
+		}
+	}
+}

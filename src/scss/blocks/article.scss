@@ -1,0 +1,132 @@
+.article {
+	padding-top: 132px;
+	padding-bottom: 84px;
+	&__body {
+		& + & {
+			margin-top: 88px;
+		}
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		margin-bottom: 16px;
+		padding-bottom: 6px;
+		border-bottom: 2px solid #fff;
+	}
+	&__date {
+		color: $white;
+		font-variant-numeric: lining-nums tabular-nums;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+	}
+	&__social {
+		display: flex;
+		gap: 12px;
+		&-link {
+			display: block;
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+			svg {
+				* {
+					transition: all 0.3s;
+				}
+			}
+			&:hover {
+				svg {
+					* {
+						fill: $white;
+						transition: all 0.3s;
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		font-family: "Neue Machina", sans-serif;
+		color: $white;
+		font-size: 62px;
+		font-weight: 700;
+		line-height: 100%;
+		margin-bottom: 40px;
+	}
+	&__wrap {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__text {
+		width: 65.7%;
+		img {
+			border-radius: 16px;
+			overflow: hidden;
+			margin-bottom: 24px;
+		}
+		p + p {
+			margin-top: 8px;
+		}
+	}
+	.card {
+		width: 100%;
+	}
+}
+@media (max-width: 1199px) {
+	.article {
+		padding-top: 128px;
+		padding-bottom: 0;
+		&__body {
+			& + & {
+				margin-top: 80px;
+			}
+		}
+		&__title {
+			margin-left: 2px;
+		}
+		&__text {
+			width: 65.2%;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.article {
+		padding-top: 124px;
+		padding-bottom: 0;
+		&__body {
+			& + & {
+				margin-top: 75px;
+			}
+		}
+		&__top {
+			margin-bottom: 20px;
+		}
+		&__title {
+			font-size: 32px;
+			margin-bottom: 36px;
+		}
+		&__text {
+			width: 64.5%;
+		}
+		.card {
+			&__caption {
+				font-size: 20px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+@media (max-width: 740px) {
+	.article {
+		padding-top: 112px;
+		padding-bottom: 45px;
+		&__body {
+			& + & {
+				margin-top: 78px;
+			}
+		}
+		&__text {
+			width: 100%;
+		}
+	}
+}

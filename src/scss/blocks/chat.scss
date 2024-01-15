@@ -1,0 +1,179 @@
+.chat {
+	position: relative;
+	z-index: 10;
+	padding-top: 47px;
+	padding-bottom: 300px;
+	&__bg {
+		position: absolute;
+		z-index: 1;
+		width: 925px;
+		height: 925px;
+		top: -127px;
+		left: calc(50% - 462px);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__wrap {
+		display: flex;
+		position: relative;
+		z-index: 10;
+	}
+	&__left {
+		width: 34.5%;
+	}
+	&__tabs {
+		max-width: 250px;
+	}
+	&__tab {
+		display: inline-flex;
+		opacity: 0.58;
+		padding: 7px 50px 7px 0px;
+		border-radius: 40px;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: $transition;
+		border: 1px solid rgba(255, 255, 255, 0);
+		margin-bottom: 8px;
+		&:hover,
+		&.active {
+			padding: 7px 24px;
+			color: $yellow;
+			border-color: rgba(255, 255, 255, 0.21);
+			transition: $transition;
+		}
+	}
+	&__right {
+		width: 50%;
+		position: relative;
+		top: -7px;
+		left: -2px;
+	}
+	&__block {
+		padding-top: 52px;
+		position: absolute;
+		width: 340px;
+		top: 0;
+		left: 0;
+		transform: translateY(20px);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0s;
+		&.active {
+			position: relative;
+			transform: translateY(0px);
+			opacity: 1;
+			visibility: visible;
+			transition: $transition;
+		}
+	}
+	&__caption {
+		margin-bottom: 21px;
+	}
+	&__desc {
+		max-width: 288px;
+		margin-bottom: 17px;
+	}
+}
+@media (max-width: 1320px) {
+}
+@media (max-width: 1080px) {
+	.chat {
+		padding-top: 150px;
+		padding-bottom: 300px;
+		&__bg {
+			width: 795px;
+			height: auto;
+			top: -130px;
+			left: calc(50% - 388px);
+		}
+	}
+}
+@media (max-width: 992px) {
+	.chat {
+		padding-top: 57px;
+		padding-bottom: 150px;
+		position: relative;
+		left: -3px;
+		&__tabs {
+			max-width: 220px;
+		}
+		&__tab {
+			white-space: normal;
+		}
+		&__block {
+			width: 290px;
+			padding-top: 100px;
+		}
+		&__right {
+			left: 3px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.chat {
+		padding-top: 70px;
+		padding-bottom: 146px;
+		&__bg {
+			width: 590px;
+			top: 10px;
+			left: auto;
+			right: -232px;
+		}
+		&__wrap {
+			flex-wrap: wrap;
+		}
+		&__left {
+			width: calc(100% + 32px);
+			overflow: auto;
+			padding-bottom: 10px;
+			margin-bottom: 96px;
+			position: relative;
+			z-index: 10;
+			margin-left: -16px;
+			margin-right: -16px;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		&__tabs {
+			max-width: initial;
+			display: flex;
+			padding-right: 0;
+			gap: 25px;
+		}
+		&__tab {
+			padding: 7px 0px;
+			white-space: nowrap;
+			margin-bottom: 0;
+			&.active,
+			&:hover {
+				padding: 8px 15px;
+			}
+		}
+		&__block {
+			width: 100%;
+			padding-top: 0;
+			left: 3px;
+		}
+		&__caption {
+			margin-bottom: 19px;
+			padding-right: 50px;
+		}
+		&__desc {
+			max-width: 100%;
+			margin-bottom: 24px;
+		}
+		&__right {
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+		&__btn {
+			min-width: 100%;
+			font-size: 20px;
+			padding: 16.5px;
+		}
+	}
+}

@@ -1,0 +1,110 @@
+.form {
+	width: 735px;
+	&__label {
+		display: block;
+		position: relative;
+		& + & {
+			margin-top: 34px;
+		}
+		&.error {
+			.form {
+				&__field {
+					border-color: $red;
+				}
+				&__error {
+					display: block;
+				}
+			}
+		}
+		&.active {
+			.form {
+				&__field {
+					border-color: $yellow;
+				}
+			}
+		}
+	}
+	&__caption {
+		position: absolute;
+		color: rgba(255, 255, 255, 0.51);
+		top: calc(50% - 12px);
+		left: 0;
+		transition: $transition;
+		&.active {
+			top: -12px;
+			font-size: 13px;
+			color: rgba(255, 255, 255, 1);
+			transition: $transition;
+		}
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-top: 40px;
+	}
+	&__btn {
+		font-size: 20px;
+		font-weight: 700;
+		padding: 16px 30px;
+	}
+	&__aggrement {
+		max-width: 220px;
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 18px;
+		a {
+			color: #7e7e4b;
+			transition: $transition;
+			&:hover {
+				color: $white;
+				transition: $transition;
+			}
+		}
+	}
+	&__error {
+		color: $red;
+		font-size: 13px;
+		margin-top: 4px;
+		display: none;
+	}
+	&.hidden {
+		display: none;
+	}
+}
+@media (max-width: 1199px) {
+	.form {
+		width: 615px;
+		&__label {
+			& + & {
+				margin-top: 14px;
+			}
+		}
+	}
+}
+@media (max-width: 992px) {
+	.form {
+		width: 65.5%;
+		&__bottom {
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+		&__btn {
+			min-width: 100%;
+		}
+		&__aggrement {
+			max-width: 225px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.form {
+		width: 100%;
+		&__label {
+			& + & {
+				margin-top: 15px;
+			}
+		}
+	}
+}

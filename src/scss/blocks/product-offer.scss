@@ -1,0 +1,124 @@
+.product-offer {
+	padding-bottom: 120px;
+	&__body {
+		position: relative;
+		z-index: 10;
+	}
+	&__img {
+		position: absolute;
+		top: 270px;
+		left: 190px;
+		z-index: -1;
+	}
+	&__top {
+		margin-bottom: 128px;
+	}
+	&__title {
+		color: transparent;
+		margin-bottom: 34px;
+		position: relative;
+		left: 3px;
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		gap: 32px;
+		&-info {
+			padding-top: 5px;
+			padding-right: 167px;
+		}
+		&-box {
+			max-width: 544px;
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+	}
+	&__items {
+		ul {
+			list-style: disc;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			li {
+				color: $white;
+				font-size: 17px;
+				font-weight: 500;
+				line-height: 24px;
+				padding-right: 25px;
+			}
+		}
+	}
+	&__caption {
+		font-family: "Neue Machina", sans-serif;
+		color: $yellow;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 110%;
+		position: relative;
+		top: -3px;
+		margin-left: -25px;
+	}
+}
+@media (max-width: 1199px) {
+	.product-offer {
+		padding-bottom: 128px;
+		&__wrap {
+			&-info {
+				padding-right: 0px;
+			}
+			&-box {
+				max-width: 527px;
+			}
+		}
+		&__img {
+			top: 310px;
+		}
+		&__items {
+			ul {
+				li {
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 992px) {
+	.product-offer {
+		padding-bottom: 114px;
+		&__title {
+			margin-bottom: 28px;
+			left: 0px;
+		}
+		&__wrap {
+			flex-wrap: wrap;
+			gap: 24px;
+			&-info {
+				padding-top: 5px;
+				padding-left: 25px;
+			}
+			&-box {
+				max-width: 500px;
+				gap: 23px;
+			}
+		}
+		&__img {
+			top: 88px;
+			left: auto;
+			right: 0;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.product-offer {
+		padding-bottom: 127px;
+		&__title {
+			margin-bottom: 26px;
+		}
+		&__img {
+			top: 243px;
+			left: auto;
+			right: -16px;
+		}
+	}
+}

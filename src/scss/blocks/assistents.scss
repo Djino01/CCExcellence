@@ -1,0 +1,141 @@
+.assistents {
+	padding-top: 132px;
+	padding-bottom: 112px;
+	&__body {
+		position: relative;
+		z-index: 10;
+	}
+	&__icon {
+		position: absolute;
+		top: -16px;
+		right: 0;
+		z-index: -1;
+	}
+	&__wrap {
+		max-width: 832px;
+	}
+	&__title {
+		margin-top: 16px;
+		margin-bottom: 78px;
+	}
+	&__info {
+		width: 100%;
+		border-radius: 16px;
+		background: rgba(106, 106, 106, 0.25);
+		backdrop-filter: blur(8px);
+		padding: 27px 32px 40px;
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+			gap: 32px;
+			margin-top: 25px;
+		}
+		&-caption {
+			width: 320px;
+			font-family: "Neue Machina", sans-serif;
+			color: $yellow;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 110%;
+		}
+		&-row {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 22px;
+			flex: 1;
+			margin-top: 3px;
+		}
+		&-coll {
+			width: calc(50% - 12px);
+			padding-top: 8px;
+			border-top: 2px solid $white;
+		}
+		&-desc {
+			font-weight: 500;
+			span {
+				color: #eb00ff;
+			}
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.assistents {
+		padding-top: 128px;
+		padding-bottom: 112px;
+		&__icon {
+			top: 0px;
+			right: 0px;
+			width: 455.805px;
+		}
+		&__wrap {
+			max-width: 776px;
+		}
+		&__info {
+			&-caption {
+				width: 265px;
+			}
+		}
+	}
+}
+@media (max-width: 992px) {
+	.assistents {
+		padding-top: 126px;
+		padding-bottom: 120px;
+		&__title {
+			max-width: 500px;
+			margin-top: 22px;
+			margin-bottom: 158px;
+		}
+		&__icon {
+			width: 312.004px;
+		}
+		&__info {
+			&-wrap {
+				flex-wrap: wrap;
+				gap: 30px;
+				margin-top: 18px;
+			}
+			&-caption {
+				width: 100%;
+				font-size: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 740px) {
+	.assistents {
+		padding-top: 112px;
+		padding-bottom: 120px;
+		&__title {
+			max-width: 500px;
+			font-size: 58px;
+			margin-top: 23px;
+			margin-bottom: 324px;
+		}
+		&__icon {
+			width: 327px;
+			top: 157px;
+			right: auto;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&__info {
+			width: calc(100% + 32px);
+			padding: 19px 18px 32px;
+			margin-left: -16px;
+			margin-right: -16px;
+			&-wrap {
+				gap: 31px;
+			}
+			&-row {
+				margin-top: 3px;
+				margin-left: -2px;
+				margin-right: -2px;
+			}
+			&-coll {
+				width: 100%;
+			}
+		}
+	}
+}

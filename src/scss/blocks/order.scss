@@ -1,0 +1,46 @@
+.order {
+	padding-top: 30px;
+	padding-bottom: 153px;
+	position: relative;
+	z-index: 20;
+	&__wrap {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 46px;
+	}
+	&__title {
+		font-family: "Neue Machina", sans-serif;
+	}
+	&__body {
+		&.hidden {
+			display: none;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.order {
+		padding-top: 114px;
+		padding-bottom: 98px;
+	}
+}
+@media (max-width: 992px) {
+	.order {
+		padding-top: 120px;
+		padding-bottom: 88px;
+		&__wrap {
+			margin-top: 36px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.order {
+		padding-top: 120px;
+		padding-bottom: 54px;
+		&__title {
+			font-size: 58px;
+		}
+		&__wrap {
+			margin-top: 40px;
+		}
+	}
+}

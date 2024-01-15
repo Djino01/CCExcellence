@@ -1,0 +1,81 @@
+.product-pros {
+	padding-top: 65px;
+	padding-bottom: 128px;
+	background-color: $secondDark;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 54px 32px;
+		margin-top: 45px;
+		position: relative;
+	}
+	&__coll {
+		width: calc(33.333% - 22px);
+		border-top: 2px solid $white;
+		padding-top: 12px;
+	}
+	&__caption {
+		font-family: "Neue Machina", sans-serif;
+		color: $white;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 6px;
+	}
+	&__bg {
+		position: absolute;
+		max-height: 100%;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		img {
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.product-pros {
+		padding-top: 65px;
+		padding-bottom: 130px;
+		padding-left: 8px;
+		margin-right: -2px;
+		&__body {
+			gap: 54px 24px;
+		}
+		&__coll {
+			width: calc(33.333% - 18px);
+		}
+	}
+}
+@media (max-width: 992px) {
+	.product-pros {
+		padding-top: 68px;
+		padding-bottom: 128px;
+		padding-left: 0px;
+		margin-right: -6px;
+		&__body {
+			gap: 38px 24px;
+			margin-top: 43px;
+		}
+		&__coll {
+			width: calc(50% - 15px);
+		}
+		&__caption {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.product-pros {
+		padding-bottom: 124px;
+		&__coll {
+			width: 100%;
+			margin-right: 22px;
+		}
+	}
+}

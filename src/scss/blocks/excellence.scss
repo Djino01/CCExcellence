@@ -1,0 +1,80 @@
+.excellence {
+	padding-top: 86px;
+	padding-bottom: 180px;
+	position: relative;
+	z-index: 10;
+	background-color: #181818;
+	overflow: hidden;
+	&__bg {
+		max-height: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		img {
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title {
+		color: #181818;
+		margin-bottom: 80px;
+	}
+	&__wrap {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__row {
+		width: 735px;
+		display: flex;
+		flex-direction: column;
+		gap: 66px;
+	}
+	&__coll {
+		width: 100%;
+	}
+	&__caption {
+		font-family: "Neue Machina", sans-serif;
+		margin-bottom: 22px;
+	}
+	&__desc {
+		max-width: 630px;
+		font-weight: 500;
+	}
+}
+@media (max-width: 1199px) {
+	.excellence {
+		&__row {
+			width: 615px;
+		}
+		&__desc {
+			max-width: 540px;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.excellence {
+		padding-top: 92px;
+		padding-bottom: 140px;
+		&__title {
+			margin-bottom: 75px;
+		}
+		&__row {
+			width: 425px;
+			gap: 52px;
+		}
+		&__caption {
+			margin-bottom: 20px;
+		}
+	}
+}
+@media (max-width: 740px) {
+	.excellence {
+		padding-top: 82px;
+		padding-bottom: 112px;
+		&__title {
+			font-size: 46px;
+			margin-bottom: 75px;
+		}
+	}
+}
