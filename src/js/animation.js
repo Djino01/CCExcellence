@@ -52,11 +52,11 @@ if ($('.assistents').length > 0) {
 	
 		// Если ширина больше 741px, используем 125%, в противном случае 180%
 		if (screenTopWidth > 992) {
-			return '70%';
-		} else if (screenTopWidth > 741) {
 			return '140%';
+		} else if (screenTopWidth > 741) {
+			return '250%';
 		} else {
-			return '200%';
+			return '280%';
 		}
 	}
 	function getTopValueAsist() {

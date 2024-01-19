@@ -5,6 +5,7 @@
 	position: relative;
 	z-index: 10;
 	overflow: hidden;
+	margin-bottom: 128px;
 	&__body {
 		display: flex;
 		flex-wrap: wrap;
@@ -57,6 +58,7 @@
 		padding-bottom: 128px;
 		padding-left: 0px;
 		margin-right: -6px;
+		margin-bottom: 148px;
 		&__body {
 			gap: 38px 24px;
 			margin-top: 43px;
@@ -73,9 +75,9 @@
 @media (max-width: 740px) {
 	.product-pros {
 		padding-bottom: 124px;
+		margin-bottom: 148px;
 		&__coll {
 			width: 100%;
-			margin-right: 22px;
 		}
 	}
 }

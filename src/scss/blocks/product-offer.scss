@@ -12,12 +12,21 @@
 	}
 	&__top {
 		margin-bottom: 128px;
+		&_bottom {
+			margin-bottom: 0;
+		}
 	}
 	&__title {
 		color: transparent;
 		margin-bottom: 34px;
 		position: relative;
 		left: 3px;
+	}
+	&__subtitle {
+		max-width: 1024px;
+		p + p {
+			margin-top: 16px;
+		}
 	}
 	&__wrap {
 		display: flex;

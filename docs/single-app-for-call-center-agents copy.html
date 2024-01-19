@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Speech Technologies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta property="og:site_name" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="250">
+	<meta property="og:image:height" content="250">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/libs.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<main class="main">
+
+<header class="header  ">
+	<div class="wrapper">
+		<div class="header__wrap flex">
+			<div class="header__first flex">
+				<div class="logo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="190" height="40" viewBox="0 0 190 40" fill="none">
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M0.380122 15.7538C-1.69466 27.2513 4.87032 38.4459 16.4971 40V30.0851C8.39197 26.4638 8.71526 13.3115 16.4971 9.88839V0C8.17168 1.15491 1.83241 7.70292 0.380122 15.7538Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M18.3162 15.7538C16.2412 27.2513 22.8062 38.4459 34.4329 40V30.0851C26.3276 26.4638 26.6511 13.3115 34.4329 9.88839V0C26.1076 1.15491 19.7685 7.70292 18.3162 15.7538Z"
+							fill="white" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M38.583 39.2606V0.731934H62.2894V9.19191H48.8667V15.874H61.5316V24.1185H48.8667V30.6387H62.2894V39.2606H38.583Z"
+							fill="#D4D727" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M75.7442 26.6942C75.9432 27.0903 76.0852 27.4014 76.1989 27.6561C76.3125 27.9106 76.3693 28.1368 76.4261 28.3633C76.4831 28.1368 76.5399 27.9106 76.6535 27.6561C76.7387 27.4296 76.8808 27.1186 77.1082 26.6942L78.4436 24.3179H84.0407L79.2389 30.7959L84.8365 38.2642H79.2673L77.165 34.7565C76.9944 34.4735 76.8524 34.1907 76.7387 33.936C76.6535 33.6532 76.5399 33.3702 76.4831 33.0874C76.4261 33.3702 76.3125 33.6532 76.1989 33.936C76.1136 34.1907 75.9716 34.4735 75.8012 34.7565L73.7269 38.2642H68.2432L73.7553 30.7959L69.0387 24.3179H74.4372L75.7442 26.6942Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M94.5574 28.9014C94.0745 28.4772 93.6198 28.1659 93.1651 27.968C92.7391 27.77 92.256 27.6852 91.7729 27.6852C90.7786 27.6852 90.0112 27.9963 89.4429 28.6469C88.8465 29.2975 88.5622 30.1744 88.5622 31.2777C88.5622 32.3527 88.8749 33.2013 89.4716 33.8237C90.068 34.4743 90.8638 34.7856 91.8865 34.7856C92.398 34.7856 92.8527 34.6723 93.3072 34.4743C93.7334 34.2764 94.1597 33.9934 94.5574 33.5692V37.8406C93.9607 38.1519 93.3642 38.4064 92.7959 38.5761C92.1992 38.7177 91.5741 38.8025 90.949 38.8025C88.7894 38.8025 87.0564 38.1236 85.7209 36.7375C84.3855 35.3512 83.7036 33.5409 83.7036 31.306C83.7036 29.1278 84.3855 27.3173 85.7493 25.9312C87.1132 24.5451 88.8749 23.8662 91.0058 23.8662C91.7161 23.8662 92.3696 23.9228 92.9379 24.0642C93.5062 24.2056 94.0461 24.4318 94.5574 24.7431V28.9014Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M106.371 29.4955C106.286 28.7034 105.973 28.0528 105.462 27.5718C104.951 27.0911 104.325 26.8647 103.558 26.8647C102.763 26.8647 102.109 27.0911 101.626 27.5153C101.171 27.968 100.859 28.6186 100.688 29.4955H106.371ZM111.23 32.2679H100.575C100.575 33.3427 100.859 34.1632 101.399 34.7573C101.967 35.3512 102.734 35.6342 103.729 35.6342C104.496 35.6342 105.121 35.4928 105.632 35.2098C106.144 34.927 106.542 34.5026 106.797 33.9651L110.519 35.4645C110.065 36.5111 109.298 37.3599 108.161 37.9254C107.025 38.5195 105.661 38.8025 104.013 38.8025C101.569 38.8025 99.6086 38.1236 98.1312 36.7658C96.6538 35.4362 95.915 33.654 95.915 31.4474C95.915 29.2692 96.6538 27.4587 98.1312 26.0161C99.6086 24.5734 101.484 23.8662 103.729 23.8662C106.058 23.8662 107.877 24.6017 109.212 26.0443C110.548 27.5153 111.23 29.4955 111.23 32.0415V32.2679Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M113.322 38.2655V16.8511H118.266V38.2655H113.322Z" fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M121.3 38.2655V16.8511H126.244V38.2655H121.3Z" fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M138.797 29.4955C138.712 28.7034 138.4 28.0528 137.888 27.5718C137.377 27.0911 136.752 26.8647 135.984 26.8647C135.189 26.8647 134.535 27.0911 134.052 27.5153C133.598 27.968 133.285 28.6186 133.115 29.4955H138.797ZM143.656 32.2679H133.001C133.001 33.3427 133.285 34.1632 133.825 34.7573C134.393 35.3512 135.16 35.6342 136.155 35.6342C136.922 35.6342 137.547 35.4928 138.059 35.2098C138.57 34.927 138.968 34.5026 139.223 33.9651L142.946 35.4645C142.491 36.5111 141.724 37.3599 140.588 37.9254C139.451 38.5195 138.087 38.8025 136.439 38.8025C133.995 38.8025 132.035 38.1236 130.557 36.7658C129.08 35.4362 128.341 33.654 128.341 31.4474C128.341 29.2692 129.08 27.4587 130.557 26.0161C132.035 24.5734 133.91 23.8662 136.155 23.8662C138.485 23.8662 140.303 24.6017 141.639 26.0443C142.974 27.5153 143.656 29.4955 143.656 32.0415V32.2679Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M145.606 38.265V24.3187H150.124V27.1477C150.778 26.0161 151.545 25.1675 152.397 24.6582C153.278 24.1207 154.301 23.8662 155.494 23.8662C156.404 23.8662 157.199 24.0076 157.909 24.2904C158.62 24.6017 159.188 24.9976 159.643 25.5634C160.012 26.0161 160.268 26.5819 160.438 27.2608C160.58 27.9397 160.665 28.9297 160.665 30.2877V38.265H155.721V30.7967C155.721 29.6654 155.551 28.8731 155.182 28.3641C154.812 27.8549 154.216 27.6001 153.42 27.6001C152.397 27.6001 151.658 27.968 151.175 28.7317C150.692 29.4955 150.465 30.7119 150.465 32.4093V38.265H145.606Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M173.327 28.9014C172.844 28.4772 172.389 28.1659 171.935 27.968C171.509 27.77 171.026 27.6852 170.542 27.6852C169.548 27.6852 168.781 27.9963 168.212 28.6469C167.616 29.2975 167.332 30.1744 167.332 31.2777C167.332 32.3527 167.644 33.2013 168.241 33.8237C168.838 34.4743 169.633 34.7856 170.656 34.7856C171.168 34.7856 171.622 34.6723 172.077 34.4743C172.503 34.2764 172.929 33.9934 173.327 33.5692V37.8406C172.73 38.1519 172.134 38.4064 171.565 38.5761C170.969 38.7177 170.344 38.8025 169.719 38.8025C167.559 38.8025 165.826 38.1236 164.49 36.7375C163.155 35.3512 162.473 33.5409 162.473 31.306C162.473 29.1278 163.155 27.3173 164.519 25.9312C165.883 24.5451 167.644 23.8662 169.775 23.8662C170.486 23.8662 171.139 23.9228 171.707 24.0642C172.276 24.2056 172.816 24.4318 173.327 24.7431V28.9014Z"
+							fill="white" />
+						<path class="fill-bg" fill-rule="evenodd" clip-rule="evenodd"
+							d="M185.142 29.4955C185.056 28.7034 184.744 28.0528 184.232 27.5718C183.721 27.0911 183.096 26.8647 182.329 26.8647C181.533 26.8647 180.88 27.0911 180.396 27.5153C179.942 27.968 179.629 28.6186 179.459 29.4955H185.142ZM190 32.2679H179.345C179.345 33.3427 179.629 34.1632 180.169 34.7573C180.738 35.3512 181.505 35.6342 182.499 35.6342C183.266 35.6342 183.891 35.4928 184.403 35.2098C184.914 34.927 185.312 34.5026 185.568 33.9651L189.29 35.4645C188.835 36.5111 188.068 37.3599 186.932 37.9254C185.795 38.5195 184.431 38.8025 182.783 38.8025C180.34 38.8025 178.379 38.1236 176.902 36.7658C175.424 35.4362 174.686 33.654 174.686 31.4474C174.686 29.2692 175.424 27.4587 176.902 26.0161C178.379 24.5734 180.254 23.8662 182.499 23.8662C184.829 23.8662 186.647 24.6017 187.983 26.0443C189.318 27.5153 190 29.4955 190 32.0415V32.2679Z"
+							fill="white" />
+					</svg>
+				</div>
+				<div class="header__burger">
+					<div class="header__burger-box">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="header__container">
+				<nav class="menu">
+					<ul>
+						<li class="menu-item-has-children">
+							<a href="#">Products</a>
+							<ul>
+								<li>
+									<a href="#">Чат-бот</a>
+								</li>
+								<li>
+									<a href="#">Виртуальный ассистент</a>
+								</li>
+								<li>
+									<a href="#">Речевая аналитика</a>
+								</li>
+								<li>
+									<a href="#">Голосовая биометрия</a>
+								</li>
+								<li>
+									<a href="#">База знаний</a>
+								</li>
+								<li>
+									<a href="#">Приложение колл-центра</a>
+								</li>
+								<li>
+									<a href="#">Развитие колл-центра</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">News</a>
+						</li>
+						<li>
+							<a href="#">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="#order" class="header__btn">Order a demo</a>
+			</div>
+			<div class="header__last flex">
+				<a href="#order" class="header__btn">Order a demo</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section class="assistents">
+	<div class="wrapper">
+		<div class="assistents__body">
+			<div class="assistents__icon">
+				<img src="img/product/single-app-for-call-center-agents/img.png" alt="">
+			</div>
+			<div class="assistents__wrap">
+				<a href="#" class="back">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M5.67832 15.2852L8.31497 15.2852L2.62243 7.78515L8.82861 0.285156L6.04831 0.285156L6.55671e-07 7.78515L5.67832 15.2852Z"
+							fill="#D4D727" />
+						<rect width="12.9659" height="2.1017"
+							transform="matrix(1 8.74228e-08 8.74228e-08 -1 2.03125 8.83594)" fill="#D4D727" />
+					</svg>
+					<span>all products CCExcellence</span>
+				</a>
+				<h1 class="assistents__title h1">Single app for call center agents</h1>
+				<div class="assistents__info">
+					<h2 class="assistents__info-title h3">If you need to</h2>
+					<div class="assistents__info-wrap">
+						<div class="assistents__info-caption">Do your agents have to repeatedly switch between windows
+							of multiple apps to find relevant data</div>
+						<div class="assistents__info-row">
+							<div class="assistents__info-coll">
+								<div class="assistents__info-desc">Train call center staff in multiple systems</div>
+							</div>
+							<div class="assistents__info-coll">
+								<div class="assistents__info-desc">Do any errors occur when copying and pasting data
+									here and there</div>
+							</div>
+							<div class="assistents__info-coll">
+								<div class="assistents__info-desc">Do you lack a single system to notify of any changes
+									in products, tariffs, etc.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-offer">
+	<div class="wrapper">
+		<div class="product-offer__body">
+			<div class="product-offer__img">
+				<picture>
+					<source srcset="img/product/offer/img.svg" media="(min-width: 992px)" />
+					<source srcset="img/product/offer/img-table.svg" media="(min-width: 700px)" />
+					<img src="img/product/offer/img-mobile.svg" alt="" />
+				</picture>
+			</div>
+			<div class="product-offer__top">
+				<h2 class="product-offer__title title-item">What we offer</h2>
+				<div class="product-offer__subtitle h3">
+					<p>InKnowledge: the platform to manage knowledge. Multi-featured knowledge base.<br> Single
+						co-working space where the knowledge over your entire company is accumulated.</p>
+					<p>This is the place where any employee or customer can promptly retrieve an answer to any issue
+						related to business processes, company activities, or company products.</p>
+				</div>
+			</div>
+			<div class="product-offer__wrap">
+				<div class="product-offer__wrap-title h3">It will</div>
+				<div class="product-offer__wrap-info">
+					<div class="product-offer__wrap-box">
+						<div class="product-offer__items">
+							<ul>
+								<li>Manage, store, and handle documents in any format.</li>
+								<li>Enjoy advanced search: a database of synonyms; auto-corrected errors / typos;
+									autosuggest of your search phrase; auto-ignoring when the keyboard language is
+									different; quick answers (a full answer under the search box); search by filters and
+									tags, and search within a chosen subject.</li>
+							</ul>
+						</div>
+						<div class="product-offer__caption">Pre-customized templates: omnichannel templates that take
+							into account the communication channels; templates to generate articles or spaces for
+							projects</div>
+						<div class="product-offer__items">
+							<ul>
+								<li>User-friendly UI, widget-based interface composer.</li>
+								<li>Set of themes that are ready to use or that you can design manually.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-pros">
+	<div class="wrapper">
+		<h2 class="product-pros__title h3">Pros</h2>
+		<div class="product-pros__body">
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Co-edit documents in office apps online</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Online editor for diagrams and flowcharts</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Script composer, with step-by-step instructions</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Enhanced reporting module featuring deep analytics on working with
+					the system</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Flexible roles model; access rights down to a portion of an article
+				</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Composer of texts, forms, and polls</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Processes to streamline approvals of materials so that you can assign
+					roles and employees for parallel and staged approvals</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Multi-space principle: create multiple spaces for individual business
+					tasks.</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Multi-language support</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Flexibly integrated with robots, apps, CRM, task trackers, etc</div>
+			</div>
+			<div class="product-pros__coll">
+				<div class="product-pros__caption">Informational support through all communication channels</div>
+			</div>
+		</div>
+	</div>
+	<div class="product-pros__bg">
+		<picture>
+			<source srcset="img/product/pros/bg.jpg" media="(min-width: 1200px)" />
+			<source srcset="img/product/pros/bg-table-big.jpg" media="(min-width: 992px)" />
+			<source srcset="img/product/pros/bg-table.jpg" media="(min-width: 700px)" />
+			<img src="img/product/pros/bg-mobile.jpg" alt="" />
+		</picture>
+	</div>
+</section>
+
+<section class="product-info">
+	<div class="wrapper">
+		<div class="product-info__body">
+			<div class="product-info__wrap">
+				<div class="product-info__left">
+					<div class="product-info__title h3">Use cases</div>
+				</div>
+				<div class="product-info__right">
+					<div class="product-info__row">
+						<div class="product-info__coll">
+							<div class="product-info__caption">Answer frequently asked questions</div>
+						</div>
+						<div class="product-info__coll">
+							<div class="product-info__caption">Help choose a product</div>
+						</div>
+						<div class="product-info__coll">
+							<div class="product-info__caption">An assistant to provide information to your staff</div>
+						</div>
+						<div class="product-info__coll">
+							<div class="product-info__caption">A channel to address the help desk.</div>
+						</div>
+						<div class="product-info__coll">
+							<div class="product-info__caption">Manage products, e.g., add or drop a service, learn a
+								current status, etc</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-info__wrap">
+				<div class="product-info__icon">
+					<picture>
+						<source srcset="img/product/info/img.svg" media="(min-width: 992px)" />
+						<img src="img/product/info/img-mobile.svg" alt="" />
+					</picture>
+				</div>
+				<div class="product-info__left">
+					<div class="product-info__title h3">Implemen<span>-</span>tation pros</div>
+				</div>
+				<div class="product-info__right">
+					<div class="product-info__items">
+						<ul>
+							<li>You can cut operational expenses, with agents efficiency improved by 20–40%</li>
+							<li>You can free up some of your resources and focus on development and growth</li>
+							<li>Based on a unified platform, you can have a single space for all tasks related to
+								information and knowledge handling. You can avoid multiple individual solutions
+								requiring support at extra cost. Results shown in current cases:</li>
+							<li>Average handling time is decreased by up to 40%</li>
+							<li>Quantity of agent errors is cut by up to 68%</li>
+							<li>Payroll/worktime expenses are cut by 40%</li>
+							<li>Number of calls to a call center is reduced by 35%. Customers can find what they need
+								easily</li>
+							<li>Training time for new agents is decreased by up to 45%</li>
+							<li>Overall workforce productivity is improved by 20–40%</li>
+							<li>With improved services, repeat sales increase by 15% and more</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-algoritm">
+	<div class="wrapper">
+		<div class="product-algoritm__body">
+			<div class="product-algoritm__img">
+				<picture>
+					<source srcset="img/product/algoritm/img.png" media="(min-width: 992px)" />
+					<source srcset="img/product/algoritm/img-table.png" media="(min-width: 700px)" />
+					<img src="img/product/algoritm/img-mobile.png" alt="" />
+				</picture>
+			</div>
+			<div class="product-algoritm__title h1">
+				<span>Implementation algorithm</span>
+				<span>Implemen<br>-tation<br> algorithm</span>
+			</div>
+			<div class="product-algoritm__wrap">
+				<div class="product-algoritm__row">
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">1</div>
+						<div class="product-algoritm__desc">Obtain audio records from the client</div>
+					</div>
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">2</div>
+						<div class="product-algoritm__desc">Recognize most typical subjects, design dialog scripts</div>
+					</div>
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">3</div>
+						<div class="product-algoritm__desc">Agree on the architecture and deploy the solution</div>
+					</div>
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">4</div>
+						<div class="product-algoritm__desc">Customize the scripts and integrate what you need</div>
+					</div>
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">5</div>
+						<div class="product-algoritm__desc">Train the client how to upgrade current scripts and add new
+							ones</div>
+					</div>
+					<div class="product-algoritm__coll">
+						<div class="product-algoritm__number title-item">6</div>
+						<div class="product-algoritm__desc">Start production run for 10% of the traffic. Collect
+							metrics, analyze dialogs with the bot, and gradually cover more traffic up to 100%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="order" class="order">
+	<div class="wrapper">
+		<div class="order__body active">
+			<h2 class="order__title h1">Free demo</h2>
+			<div class="order__wrap">
+				<form action="#" class="form">
+					<div class="form__body">
+						<label class="form__label">
+							<div class="form__caption">Name</div>
+							<input type="text" value="" name="" class="form__field field" placeholder="">
+							<div class="form__error">Поле заполнено некорректно</div>
+						</label>
+						<label class="form__label error">
+							<div class="form__caption active">E-mail</div>
+							<input type="text" value="alex" name="" class="form__field field" placeholder="">
+							<div class="form__error">Поле заполнено некорректно</div>
+						</label>
+						<label class="form__label active">
+							<div class="form__caption active">Web site</div>
+							<input type="text" value="Title" name="" class="form__field field" placeholder="">
+							<div class="form__error">Поле заполнено некорректно</div>
+						</label>
+						<label class="form__label">
+							<div class="form__caption">Phone</div>
+							<input type="text" value="" name="" class="form__field field phone-mask" placeholder="">
+							<div class="form__error">Поле заполнено некорректно</div>
+						</label>
+					</div>
+					<div class="form__bottom">
+						<button class="form__btn btn">Order a demo</button>
+						<div class="form__aggrement">I hereby agree that <a href="#">my personal data will be processed
+								by
+								CCExcellecnce</a></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="thanks hidden">
+			<div class="thanks__wrap">
+				<div class="thanks__title h2">Application has been successfully sent</div>
+				<div class="thanks__icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+						<circle cx="50" cy="50" r="49.5" stroke="#D4D727" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M76 36.4466L44.8768 67.4156L26 48.6323L29.4638 45.1857L44.8768 60.5223L72.5362 33L76 36.4466Z"
+							fill="#D4D727" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="footer__bg">
+		<picture>
+			<source srcset="img/footer/bg-new.png" media="(min-width: 1200px)" />
+			<source srcset="img/footer/bg-table-big-new.jpg" media="(min-width: 992px)" />
+			<source srcset="img/footer/bg-table-new.jpg" media="(min-width: 700px)" />
+			<img src="img/footer/bg-mobile.jpg" alt="" />
+		</picture>
+	</div>
+	<div class="wrapper">
+		<div class="footer__wrap">
+			<div class="footer__first">
+				<div class="footer__copiright">© CCExcellence, 2024</div>
+				<div class="footer__developer">Design by <a href="#">Brele</a></div>
+			</div>
+			<div class="footer__container">
+				<address class="footer__address">Address: Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba,
+					Dubai,
+					U.A.E</address>
+				<div class="footer__contacts">
+					<a href="#" class="footer__link">+7 495 785-0494, </a>
+					<a href="#" class="footer__link">+7 495 785-0499</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<section class="recommendations">
+	<div class="wrapper">
+		<div class="recommendations__title title-item">Other CCExcel<span>-</span>lence Products</div>
+		<div class="recommendations__body">
+			<div class="recommendations__video">
+				<video pip="false" autoplay muted loop="" preload="metadata" playsinline="" webkit-playsinline=""
+					poster="">
+					<source src="img/promo/video.webm" type="video/webm">
+					<source src="img/promo/video.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="recommendations__wrap">
+				<div class="recommendations__left">
+					<div class="recommendations__tabs">
+						<div class="recommendations__tab" data-recommendations="1">Chatbot</div>
+						<div class="recommendations__tab active" data-recommendations="2">Virtual Assistants</div>
+						<div class="recommendations__tab" data-recommendations="3">Speech Analytics</div>
+						<div class="recommendations__tab" data-recommendations="4">Automate your outbound calls</div>
+						<div class="recommendations__tab" data-recommendations="5">Voice biometrics</div>
+						<div class="recommendations__tab" data-recommendations="6">Knowledge Base</div>
+						<div class="recommendations__tab" data-recommendations="7">Application for Call Center</div>
+						<div class="recommendations__tab" data-recommendations="8">Develop your Contact Center</div>
+					</div>
+				</div>
+				<div class="recommendations__right">
+					<div class="recommendations__block" data-recommendations-block="1">
+						<div class="recommendations__caption h3">Chatbot bot</div>
+						<div class="recommendations__desc">Our recommendations bot is able to catch the gist of an issue
+							and
+							thus provide
+							relevant
+							information enough to solve the issue</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block active" data-recommendations-block="2">
+						<div class="recommendations__caption h3">Virtual Assistants</div>
+						<div class="recommendations__desc">Our virtual consultant will deliver information on typical
+							issues, ask
+							for missing details, and help your customer.</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="3">
+						<div class="recommendations__caption h3">Speech analytics</div>
+						<div class="recommendations__desc">Our speech analytics module will help assess the quality of
+							the
+							services
+							your agents provide, their sales efficiency, and how strictly they adhere to your scripts
+							and
+							regulations</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="4">
+						<div class="recommendations__caption h3">Automate your outbound calls</div>
+						<div class="recommendations__desc">This module will automate your telemarketing, debt recovery,
+							and
+							other
+							communications with customers</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="5">
+						<div class="recommendations__caption h3">Voice biometrics</div>
+						<div class="recommendations__desc">This module will help verify the customer's identity and
+							prevent
+							fraud
+						</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="6">
+						<div class="recommendations__caption h3">Knowledge Base</div>
+						<div class="recommendations__desc">This module will help verify the customer's identity and
+							prevent
+							fraud
+						</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="7">
+						<div class="recommendations__caption h3">Application for Call Center</div>
+						<div class="recommendations__desc">This module will help verify the customer's identity and
+							prevent
+							fraud
+						</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+					<div class="recommendations__block" data-recommendations-block="8">
+						<div class="recommendations__caption h3">Develop your Contact Center</div>
+						<div class="recommendations__desc">This module will help verify the customer's identity and
+							prevent
+							fraud
+						</div>
+						<a href="#order" class="recommendations__btn btn">Order a demo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+<script src="js/libs.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>

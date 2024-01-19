@@ -1,5 +1,4 @@
 .product-info {
-	padding-top: 128px;
 	padding-bottom: 128px;
 	&__body {
 		display: flex;
@@ -151,7 +150,6 @@
 }
 @media (max-width: 992px) {
 	.product-info {
-		padding-top: 148px;
 		padding-bottom: 136px;
 		&__body {
 			gap: 129px;
@@ -196,7 +194,6 @@
 }
 @media (max-width: 740px) {
 	.product-info {
-		padding-top: 147px;
 		padding-bottom: 145px;
 		&__coll {
 			width: 100%;
