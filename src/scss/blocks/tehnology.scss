@@ -1,5 +1,18 @@
 .tehnology {
 	padding-bottom: 200px;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 120px;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+		z-index: 11;
+	}
 	&__top {
 		padding-bottom: 124px;
 		&-box {
@@ -37,6 +50,8 @@
 		}
 	}
 	&__body {
+		position: relative;
+		z-index: 10;
 		&-title {
 			font-family: "Neue Machina", sans-serif;
 			color: #fff;
@@ -44,6 +59,25 @@
 			font-weight: 700;
 			line-height: 100%;
 			margin-bottom: 75px;
+		}
+	}
+	&__bg {
+		width: 736px;
+		height: 180%;
+		position: absolute;
+		top: -120px;
+		right: 0;
+		z-index: -1;
+		background-image: url(../img/tehnology/bg.png);
+		background-repeat: repeat-y;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 120px;
+			top: 0;
+			left: 0;
+			background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 		}
 	}
 	&__row {
@@ -100,6 +134,9 @@
 				margin-bottom: 78px;
 			}
 		}
+		&__bg {
+			width: 616px;
+		}
 	}
 }
 @media (max-width: 992px) {
@@ -130,10 +167,16 @@
 				margin-bottom: 17px;
 			}
 		}
+		&__bg {
+			right: -88px;
+		}
 	}
 }
 @media (max-width: 740px) {
 	.tehnology {
+		&::after {
+			height: 80px;
+		}
 		&__top {
 			padding-bottom: 75px;
 			&-box {
@@ -185,6 +228,13 @@
 				br {
 					display: none;
 				}
+			}
+		}
+		&__bg {
+			top: -70px;
+			right: -330px;
+			&::before {
+				height: 80px;
 			}
 		}
 	}

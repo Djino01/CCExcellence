@@ -68,6 +68,9 @@
 		top: -3px;
 		margin-left: -25px;
 	}
+	&__image {
+		display: none;
+	}
 }
 @media (max-width: 1199px) {
 	.product-offer {
@@ -121,13 +124,35 @@
 @media (max-width: 740px) {
 	.product-offer {
 		padding-bottom: 127px;
+		&__top {
+			position: relative;
+			z-index: 16;
+		}
 		&__title {
 			margin-bottom: 26px;
+		}
+		&__caption {
+			br {
+				display: none;
+			}
+		}
+		&__wrap {
+			position: relative;
+			z-index: 10;
 		}
 		&__img {
 			top: 243px;
 			left: auto;
 			right: -16px;
+			display: none;
+		}
+		&__image {
+			display: block;
+			position: absolute;
+			width: 343.996px;
+			top: -200px;
+			right: -15px;
+			z-index: -1;
 		}
 	}
 }

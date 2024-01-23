@@ -12,7 +12,14 @@ if ($('.promo').length > 0) {
 		const screenWidth = window.innerWidth;
 	
 		// Если ширина больше 741px, используем 125%, в противном случае 180%
-		return screenWidth > 741 ? '220%' : '340%';
+		//return screenWidth > 741 ? '320%' : '340%';
+		if (screenWidth > 992) {
+			return '320%';
+		} else if (screenWidth > 741) {
+			return '240%';
+		} else {
+			return '550%';
+		}
 	}
 	
 	function getTopValue() {
@@ -20,14 +27,14 @@ if ($('.promo').length > 0) {
 		const screenTopWidth = window.innerWidth;
 	
 		// Если ширина больше 741px, используем 125%, в противном случае 180%
-		return screenTopWidth > 741 ? '80%' : '120%';
+		return screenTopWidth > 741 ? '10%' : '20%';
 	}
 	
 	// Создаем анимацию с GSAP с динамическим значением y
 	gsap.to(promoVideo, {
 		y: getYValue(), // Используем функцию для определения значения y
-		duration: 2, // Продолжительность анимации (в секундах)
-		ease: 'power2.inOut', // Легкость анимации
+		duration: 4, // Продолжительность анимации (в секундах)
+		ease: 'none', // Легкость анимации
 		scrollTrigger: {
 			trigger: '.container', // Этот блок запускает анимацию
 			start: 'top ' + getTopValue(), // Начало анимации при достижении верхней границы контейнера
