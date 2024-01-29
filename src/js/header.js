@@ -27,3 +27,7 @@ if ($('.header__burger').length > 0) {
 		jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 600);
 	});
 }
+
+$(".menu-item-has-children>a").on("click", function(e){
+	e.preventDefault();
+});

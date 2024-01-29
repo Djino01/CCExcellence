@@ -6,7 +6,7 @@
 	}
 	&__img {
 		position: absolute;
-		top: 270px;
+		top: -64px;
 		left: 190px;
 		z-index: -1;
 	}
@@ -41,6 +41,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 24px;
+		}
+		&.product-scroll {
+			min-height: 340px;
+			position: relative;
 		}
 	}
 	&__items {
@@ -83,9 +87,6 @@
 				max-width: 527px;
 			}
 		}
-		&__img {
-			top: 310px;
-		}
 		&__items {
 			ul {
 				li {
@@ -115,7 +116,7 @@
 			}
 		}
 		&__img {
-			top: 88px;
+			top: -214px;
 			left: auto;
 			right: 0;
 		}
